@@ -1,0 +1,303 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration-line: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+.container-slider{
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.container-slider h1{
+    position: absolute;
+    color: #282828;
+    top: -70px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.container-slider h1::before{
+    content: '';
+    width: 7%;
+    height: 5px;
+    background-color: #fe4c50;
+    position: absolute;
+    bottom: -23px;
+    left: 425px;
+}
+
+.container-slider .grid-box > .arrow-1{
+    position: absolute;
+    top: 150px;
+    left: 6px;
+    height: auto;
+    padding: 0;
+    opacity: 0;
+    z-index: 11111;
+}
+
+.container-slider .grid-box > .arrow-1 i{
+    font-size: 17px;
+    color: #ffffffc9;
+    background-color: #8080809c;
+    padding: 25px 8px;
+}
+
+.container-slider .grid-box > .arrow-2{
+    position: absolute;
+    right: 6px;
+    top: 150px;
+    height: auto;
+    padding: 0;
+    opacity: 0;
+    z-index: 11111;
+}
+
+.container-slider .grid-box > .arrow-2 i{
+    font-size: 17px;
+    color: #ffffffc9;
+    background-color: #8080809c;
+    padding: 25px 8px;
+}
+
+.container-slider .grid-box{
+    display: grid;
+    grid-template-columns: repeat(4,220px);
+    justify-content: center;
+    transform: translateY(80px);
+    gap: 10px;
+}
+
+.container-slider .grid-box:hover .arrow-1{
+opacity: 1;
+}
+
+.container-slider .grid-box:hover .arrow-2{
+    opacity: 1;
+}
+
+.container-slider .grid-box > div:hover .rated{
+    opacity: 1;
+}
+
+.container-slider .grid-box .rated{
+    opacity: 0;
+    transition: 300ms;
+}
+
+.container-slider .grid-box > .box-1 .rated button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 21px;
+    left: -172px
+}
+
+.container-slider .grid-box > div:last-child button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 21px;
+    left: 10px;
+}
+
+.container-slider .grid-box > div:not(:first-child,:last-child) button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 21px;
+    position: absolute;
+    right: 10px;
+}
+
+.container-slider .grid-box button > i{
+    color: #000000a1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container-slider .grid-box button:hover > i{
+    color: #fe4c50;
+}
+
+.container-slider .grid-box > div{
+    position: relative;
+    height: 335px;
+    padding-top: 18px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.container-slider .grid-box > div:hover{
+    box-shadow: 0px 0px 5px #7f7e7e66;
+}
+
+.container-slider .grid-box > div:not(:last-child){
+    border-right: solid 1px #00000012;
+}
+
+.container-slider .grid-box > div a{
+    color: #1e1e27c7;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+    padding: 18px 0px;
+    line-height: 21px;
+}
+
+.container-slider .grid-box > div a:hover{
+    color: #1e1e2773;
+}
+
+.container-slider .grid-box > .box-1 .p-2{
+    position: relative;
+    color: #fe4c50;
+    font-weight: 600;
+    width: 125px;
+    margin: auto;
+}
+
+.container-slider .grid-box > div p{
+    position: relative;
+    color: #fe4c50;
+    font-weight: 600;
+    width: 125px;
+    margin: auto;
+}
+
+.container-slider .grid-box > div:not(:first-child) p{
+    width: 58px;
+}
+
+.container-slider .grid-box > div p span{
+    color: #1e1e2773;
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+}
+
+.container-slider .grid-box > div p span::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #00000075;
+    position: absolute;
+    top: 8px;
+}
+
+
+.container-slider .grid-box .box-1 .image-container{
+    background-image: url('images/product_1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 65%;
+}
+
+.container-slider .grid-box .box-1::before{
+    content: '-$20';
+    background-color: #fe4c50;
+    color: white;
+    font-weight: 800;
+    padding: 3px 13px;
+    font-size: 12px;
+    border-radius: 4px;
+    position: absolute;
+    right: 8px;
+}
+
+.container-slider .grid-box .box-1::after{
+    content: '';
+    background-color: #fe4c50;
+    width: 12px;
+    height: 15px;
+    clip-path: polygon(0 0, 0 97%, 100% 0);
+    position: absolute;
+    top: 35px;
+    right: 44px;
+    z-index: -1111;
+}
+
+.container-slider .grid-box .box-2 .image-container{
+    background-image: url('images/product_2.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 65%;
+}
+
+.container-slider .grid-box .box-2::before{
+    content: 'NEW';
+    background-color: #51a042;
+    color: white;
+    font-weight: 800;
+    padding: 3px 13px;
+    font-size: 12px;
+    border-radius: 4px;
+    position: absolute;
+    left: 8px;
+}
+
+.container-slider .grid-box .box-2::after{
+    content: '';
+    background-color: #51a042;
+    width: 12px;
+    height: 15px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    position: absolute;
+    top: 35px;
+    left: 44px;
+    z-index: -1111;
+}
+
+.container-slider .grid-box .box-3 .image-container{
+    background-image: url('images/product_3.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 65%;
+}
+
+.container-slider .grid-box .box-4 .image-container{
+    background-image: url('images/product_4.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 65%;
+}
+
+.container-slider .grid-box .box-4::before{
+    content: 'SALE';
+    background-color: #fe4c50;
+    color: white;
+    font-weight: 800;
+    padding: 3px 13px;
+    font-size: 12px;
+    border-radius: 4px;
+    position: absolute;
+    right: 8px;
+}
+
+.container-slider .grid-box .box-4::after{
+    content: '';
+    background-color: #fe4c50;
+    width: 12px;
+    height: 15px;
+    clip-path: polygon(0 0, 0 97%, 100% 0);
+    position: absolute;
+    top: 35px;
+    right: 44px;
+    z-index: -1111;
+}
